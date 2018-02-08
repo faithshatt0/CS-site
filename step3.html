@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the head -->
+<!-- All styles and javascript go inside the head -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Design a REST API</title>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Ubuntu" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+<!-- closing head -->
+
+    <!-- This is the body -->
+    <!-- This is where we place the content of our website -->
+    <body>
+        <header>
+            <h1>Designing a REST API</h1>
+        </header>
+        
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="step1.html">Step 1</a>
+            <a href="step2.html">Step 2</a>
+            <span id="current-link"><a href="step3.html">Step 3</a></span>
+            <a href="step4.html">Step 4</a>
+            <a href="sources.html">Sources</a>
+        </nav>
+        
+        <!-- This is the footer -->
+        <!-- The footer goes inside the body but not always -->
+        <main>
+            <div id="info">
+                Setting up the database
+            
+                <img alt width=150 height=150 src="https://www.soapui.org/soapui/media/images/dojo/dojo_working_with_data_production.png">
+            
+                <h3>Step 3: Connect to MongoDB</h3>
+                Add the following lines of code to the server.js file. (Added lines are specified)
+                <pre id="serverCode">
+'use strict';
+
+const Hapi = require('hapi');  
+const mongojs = require('mongojs');  // Added
+
+// Create a server with a host and port
+const server = new Hapi.Server();  
+server.connection({  
+    host: 'localhost', 
+    port: 3000
+});
+
+//Connect to db
+server.app.db = mongojs('hapi-rest-mongo', ['books']);  // Added
+
+// Add the route
+
+...
+                </pre>
+            </div>
+        </main>
+        
+        <footer>
+            <hr>
+            Faith Shatto. 2017
+            <br/>
+            <img alt src= "https://csumb.edu/sites/default/files/styles/profile_large/public/photo_1_6.jpg?itok=N4I4g9Wl">
+        </footer>
+        <!-- closing footer -->
+       
+    </body>
+    <!-- closing body -->
+
+</html>

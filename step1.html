@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the head -->
+<!-- All styles and javascript go inside the head -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Design a REST API</title>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Ubuntu" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+<!-- closing head -->
+
+    <!-- This is the body -->
+    <!-- This is where we place the content of our website -->
+    <body>
+        <header>
+            <h1>Designing a REST API</h1>
+        </header>
+        
+        <nav>
+            <a href="index.php">Home</a>
+            <span id="current-link"><a href="step1.html">Step 1</a></span>
+            <a href="step2.html">Step 2</a>
+            <a href="step3.html">Step 3</a>
+            <a href="step4.html">Step 4</a>
+            <a href="sources.html">Sources</a>
+        </nav>
+
+        <main>
+            <div id="info">
+                Folders and Files
+                <h3>For starters</h3>
+                
+                <img alt src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Icons8_flat_folder.svg/480px-Icons8_flat_folder.svg.png">
+                You will need to set up the project folders and files like so<br/>
+                
+                <div id="adjustForPic">
+                <pre id="folder">node_modules folder created by 'npm install'</pre>
+                <pre id="folder1">routes folder</pre>
+                <pre id="bookCode">----- books.js // route definitions within routes</pre>
+                <pre id="code1">package.json // dependencies and project info</pre>
+                <pre id="serverCode">server.js // entry point of app, define server</pre>
+                </div>
+                
+                <hr>
+                
+                <h3>Step 1 - Create package.json file</h3>
+                Make sure the following lines of code are present in the package.json file. Pay attention to the Node dependencies in particular.
+                <pre id="code">
+{
+  "name": "hapi-rest-mongo",
+  "version": "1.0.0",
+  "description": "Simple REST project with hapijs and mongodb.",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" &amp;&amp; exit 1"
+  },
+  
+  "dependencies": {
+    "boom": "^4.2.0",
+    "hapi": "^16.1.0",
+    "joi": "^10.2.2",
+    "mongojs": "^2.4.0",
+    "node-uuid": "^1.4.7"
+  }
+}
+                </pre>
+            </div>
+        </main>
+        
+        <footer>
+            <hr>
+            Faith Shatto. 2017
+            <br/>
+            <img alt src= "https://csumb.edu/sites/default/files/styles/profile_large/public/photo_1_6.jpg?itok=N4I4g9Wl">
+        </footer>
+        <!-- closing footer -->
+       
+    </body>
+    <!-- closing body -->
+
+</html>

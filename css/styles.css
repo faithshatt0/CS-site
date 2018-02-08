@@ -1,0 +1,110 @@
+body {
+    font-family: 'Ubuntu';
+    color: gray;
+}
+
+header, main, nav, footer, #content{
+    text-align: center;
+}
+
+nav a {
+    padding: 15px;
+    padding-bottom: 4px;
+    font-family: 'Montserrat';
+    font-size: 1.2em;
+    text-decoration: none;
+    color: gray;
+}
+
+nav a:hover {
+    border-bottom: 2px red solid;
+    font-size: 1.5em;
+    transition: .5s;
+}
+
+#welcomeText {
+    text-align: left;
+    font-size: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+footer {
+    clear: left;
+    font-family: 'Montserrat';
+    color: gray;
+}
+
+footer img{
+    width: 150px;
+}
+
+#content {
+    padding-top: 15px;
+}
+
+.hobby {
+    color: yellow;
+}
+
+h1 {
+    font-family: 'Merriweather';
+    font-size: 2em;
+    margin-bottom: 0px;
+    color: black;
+}
+
+h2,h3 {
+    color:black;
+}
+
+#current-link a {
+    color: black;
+}
+
+#info {
+    clear: both;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+}    
+
+#code, #code1 {
+    color: white;
+    background-color: #b2a6a6;
+    padding: 10px;
+}
+
+#bookCode, #bookCode1, #bookCode2, #bookCode3, #bookCode4, #bookCode5 {
+    color: white;
+    background-color: #223c56;
+    padding: 10px;
+}
+
+#serverCode {
+    color: white;
+    background-color: #470808;
+    padding: 10px;
+}
+
+#exampleText {
+    color: black;
+    background-color: #e3e4e5;
+    padding: 10px;
+}
+
+#folder, #folder1 {
+    color:white;
+    background-color: black;
+    padding: 10px;
+}
+
+img {
+    padding-left: 50px;
+    float: right;
+}
+
+#adjustForPic {
+    margin-right: 500px;
+}

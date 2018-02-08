@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is the head -->
+<!-- All styles and javascript go inside the head -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Design a REST API</title>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Ubuntu" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+<!-- closing head -->
+
+    <!-- This is the body -->
+    <!-- This is where we place the content of our website -->
+    <body>
+        <header>
+            <h1>Designing a REST API</h1>
+        </header>
+        
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="step1.html">Step 1</a>
+            <span id="current-link"><a href="step2.html">Step 2</a></span>
+            <a href="step3.html">Step 3</a>
+            <a href="step4.html">Step 4</a>
+            <a href="sources.html">Sources</a>
+        </nav>
+        
+        <!-- This is the footer -->
+        <!-- The footer goes inside the body but not always -->
+        <main>
+            <div id="info">
+                Setting up the server
+                
+                <img alt width=150 height=150 src="http://pngimages.net/sites/default/files/wireless-network-png-image-87803.png">
+                <h3>Step 2 - Create server</h3>
+                Create a server.js file with the following code:
+                <pre id="serverCode">
+'use strict';
+
+const Hapi = require('hapi');
+
+// Create a server with a host and port
+const server = new Hapi.Server();  
+server.connection({  
+    host: 'localhost',
+    port: 3000
+});
+
+// Add the route
+server.route({  
+    method: 'GET',
+    path:'/books',
+    handler: function (request, reply) {
+
+        return reply('Here the books will be shown soon...');
+    }
+});
+
+// Start the server
+server.start((err) => {
+
+    if (err) {
+        throw err;
+    }
+    console.log('Server running at:', server.info.uri);
+});
+                </pre>
+                <hr>
+                To start the server, navigate to the folder with the server.js file and type the following command in the command prompt:
+                
+                <pre id="code">
+>>> node server.js
+                </pre>
+                <hr>
+                Once your program starts, navigate to <a href= "http://localhost:3000/books">http://localhost:3000/books </a>
+                <br/><br/>
+                There, you should see the following text:
+                <br/>
+                
+                <pre id="exampleText">
+Here the books will be shown...
+                </pre>
+                
+            </div>
+        </main>
+        
+        <footer>
+            <hr>
+            Faith Shatto. 2017
+            <br/>
+            <img alt src= "https://csumb.edu/sites/default/files/styles/profile_large/public/photo_1_6.jpg?itok=N4I4g9Wl">
+        </footer>
+        <!-- closing footer -->
+       
+    </body>
+    <!-- closing body -->
+
+</html>
